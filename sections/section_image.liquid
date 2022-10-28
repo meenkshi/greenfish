@@ -44,12 +44,12 @@
     <div class="OverlayBox">
         {%- if section.settings.image1 != blank -%}
         <div class="DesktopImage">
-            <img src="{{section.settings.image1 | img_url: 'master'}}" alt="" class="full-img "/>        
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{section.settings.image1 | img_url: 'master'}}" alt="" class="full-img lazy2 lazy3 "/>        
         </div>
         {%- endif -%}
         {%- if section.settings.image2 != blank -%}
         <div class="MobileImage">
-            <img src="{{section.settings.image2 | img_url: 'master'}}" alt="" class="full-img "/>        
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{section.settings.image2 | img_url: 'master'}}" alt="" class="full-img lazy2 lazy3 "/>        
         </div>
         {%- endif -%}
     </div>

@@ -276,7 +276,7 @@ $colorTopBarText: #757575;
 $colorBody: #ffffff;
 $colorHeader: transparent;
 $colorTopBar: #ffffff;
-$passwordBgImage: '//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/password-page-background.jpg?v=129873446965807520001631239698';
+$passwordBgImage: '//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/password-page-background.jpg?v=129873446965807520001666786360';
 
 // Border colors
 $colorBorder: #f3f3f3;
@@ -1470,7 +1470,7 @@ select {
           appearance: none;
   background-position: right center;
   background: {
-    image: url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/ico-select.svg?v=23114707131166917281631239719');
+    image: url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/ico-select.svg?v=23114707131166917281666786360');
     repeat: no-repeat;
     position: right 10px center;
     color: #fff;
@@ -1656,11 +1656,11 @@ label.error {
 /*================ Partials | Icons ================*/
 @font-face {
   font-family: "icons";
-  src: url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/icons.eot?v=173286443829982275381631239691');
-  src: url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/icons.eot?v=173286443829982275381631239691#iefix') format("embedded-opentype"),
-    url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/icons.woff?v=131047401885007950221631239693') format("woff"),
-    url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/icons.ttf?v=14218786294799897621631239693') format("truetype"),
-    url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/15/assets/icons.svg?v=179214853477157173161631239692#timber-icons') format("svg");
+  src: url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/icons.eot?v=173286443829982275381666786360');
+  src: url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/icons.eot?v=173286443829982275381666786360#iefix') format("embedded-opentype"),
+    url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/icons.woff?v=131047401885007950221666786360') format("woff"),
+    url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/icons.ttf?v=14218786294799897621666786360') format("truetype"),
+    url('//cdn.shopify.com/s/files/1/0362/4930/5132/t/18/assets/icons.svg?v=179214853477157173161666786360#timber-icons') format("svg");
   font-weight: normal;
   font-style: normal;
 }

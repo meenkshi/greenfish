@@ -44,7 +44,7 @@
                   <div style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;">
                     <img id="{{ img_id }}"
                          class="article__image lazyload"
-                         src="{{ article.image | img_url: '300x300' }}"
+                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                          data-src="{{ img_url }}"
                          data-widths="[90, 120, 150, 180, 360, 480, 600, 750, 940, 1080, 1296]"
                          data-aspectratio="{{ article.image.aspect_ratio }}"
@@ -105,7 +105,7 @@
 
             <div class="member-box">
               <h3 class="footer_heading">We are members of:</h3>
-              <a href="http://ipnlf.org/who-we-are/members/greenfish" target="_blank"><img src="{{'ipnlf.png' | file_url}}" class="full-img" /></a>
+              <a href="http://ipnlf.org/who-we-are/members/greenfish" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{'ipnlf.png' | file_url}}" class="full-img lazy2 lazy3" /></a>
             </div> 
           </div>
 
@@ -120,20 +120,20 @@
 
   <div class="footer-bottom-bar">
     <div class="footer-overlay">
-      <img src="{{'tmountain.png' | file_url}}" />
-      <img src="{{'tmountain-mobile.png' | file_url}}" />
+      <img class="lazy2 lazy3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{'tmountain.png' | file_url}}" />
+      <img class="lazy2 lazy3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{'tmountain-mobile.png' | file_url}}" />
     </div>
 
     <div class="footer-content">
     <div class="social-box">
       <div class="social-img">
         <a class="icon-fallback-text" href="{{ settings.social_instagram_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}" target="_blank" aria-describedby="a11y-new-window-external-message">
-          <img src="{{'ig.svg' | file_url}}" />
+          <img class="lazy2 lazy3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{'ig.svg' | file_url}}" />
         </a>        
       </div>
       <div class="social-img">
         <a class="icon-fallback-text" href="{{ settings.social_facebook_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}" target="_blank" aria-describedby="a11y-new-window-external-message">
-          <img src="{{'fb.svg' | file_url}}" />
+          <img class="lazy2 lazy3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{'fb.svg' | file_url}}" />
         </a>
       </div>
     </div>

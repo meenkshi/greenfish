@@ -36,9 +36,9 @@
             <div id="{{ img_wrapper_id }}" class="product-single__image-wrapper supports-js{% unless featured_image == image %} hide{% endunless %}{% if section.settings.product_image_zoom_type == 'lightbox' %} zoom-lightbox{% endif %}" data-image-id="{{ image.id }}">
                 <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
                 <img id="{{ img_id }}"
-                    class="lazy2 product-single__image lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
-                    {% if featured_image == image %}src="{{ image | img_url: '300x300' }}"{% endif %}
-                    data-src="{{ img_url }}"
+                    class="lazy2 {% if forloop.first == true %} lazy3 {% endif %} product-single__image lazyloaded{% unless featured_image == image %} lazypreload{% endunless %}"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    data-srcset="{{ image | img_url: '1728x' }} 1536w,{{ image | img_url: '1296x' }} 1280w,{{ image | img_url: '900x' }} 768w,{{ image | img_url: '540x'}} 320w"
                     data-widths="[180, 370, 540, 740, 900, 1080, 1296, 1512, 1728, 2048]"
                     data-aspectratio="{{ image.aspect_ratio }}"
                     data-sizes="auto"
@@ -65,7 +65,7 @@
         {% when 'external_video' %}
         <li class="grid__item wide--one-quarter large--one-third medium-down--one-third">
             <a data-image-id="{{ image.id }}" href="{{ image | img_url: '1024x1024' }}" class="product-single__thumbnail" data-type="video">
-                <img class="lazy2" data-src="{{ image | img_url: '200x200' }}" alt="{{ image.alt | escape }}">
+                <img class="lazy2 lazy3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{ image | img_url: '200x200' }}" alt="{{ image.alt | escape }}">
             </a>
         </li>
         {% else %}
@@ -79,7 +79,7 @@
         {% when 'image' %}
         <li class="grid__item wide--one-quarter large--one-third medium-down--one-third">
             <a data-image-id="{{ image.id }}" href="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail" data-type="image">
-            <img class="lazy2" data-src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
+            <img class="lazy2 lazy3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
             </a>
         </li>
         {% else %}

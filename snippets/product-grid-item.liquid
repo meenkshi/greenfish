@@ -46,8 +46,9 @@
               <div style="padding-top:{{ 1 | divided_by: featured.featured_image.aspect_ratio | times: 100}}%;">
                 <img id="{{ img_id }}"
                      alt="{{ featured.featured_image.alt | escape }}"
-                     class="lazy2 product__img lazyload"
-                     data-src="{{ img_url }}"
+                     class="lazy2 product__img lazyloaded lazy3"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                     data-srcset="{{ featured.featured_image | img_url: '1080x' }} 1536w,{{ featured.featured_image | img_url: '940x' }} 1280w,{{ featured.featured_image | img_url: '600x' }} 768w,{{ featured.featured_image | img_url: '360x'}} 320w'
                      data-widths="[150, 220, 360, 470, 600, 750, 940, 1080, 1296, 1512, 1728, 2048]"
                      data-aspectratio="{{ featured.featured_image.aspect_ratio }}"
                      data-sizes="auto"

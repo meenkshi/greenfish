@@ -50,8 +50,8 @@
                       <div id="{{ wrapper_id }}" class="cart__image-wrapper supports-js">
                         <div style="padding-top:{{ 1 | divided_by: item.image.aspect_ratio | times: 100}}%;">
                           <img id="{{ img_id }}"
-                               class="cart__image lazyload"
-                               data-src="{{ img_url }}"
+                               class="cart__image lazyloaded"
+                               src="{{ item.image | img_url: '360x' }}"
                                data-widths="[40, 65, 90, 120, 150, 180, 360, 480, 600]"
                                data-aspectratio="{{ item.image.aspect_ratio }}"
                                data-sizes="auto"
