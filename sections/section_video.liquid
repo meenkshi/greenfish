@@ -1,0 +1,62 @@
+<div class="section offset" id="section_{{section.id}}">  
+    {%- if section.settings.title != blank -%}
+    <div class="SectionHeader center">
+        <h2 class="SectionSmallTitle">{{section.settings.title}}</h2>
+    </div>
+    {%- endif -%}
+
+    <div class="SectionContent">
+      <div class="VideoBox">
+        <div class="OverlayBox">
+            {%- if section.settings.image1 != blank -%}
+            <div class="DesktopImage">
+                <img src="{{section.settings.image1 | img_url: 'master'}}" alt="Video Background" class="full-img "/>        
+            </div>
+            {%- endif -%}
+            {%- if section.settings.image2 != blank -%}
+            <div class="MobileImage">
+                <img src="{{section.settings.image2 | img_url: 'master'}}" alt="Video Background" class="full-img "/>        
+            </div>
+            {%- endif -%}
+        </div>
+
+        <a href="{{section.settings.video}}" data-lity>
+          <img src="{{'play-button.svg' | file_url}}" alt="Play Button"/>
+        </a>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video",  
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "video",
+        "label": "Youtube Video"
+      },
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Descktop Background"            
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Mobile Background"            
+      }
+	],
+  "presets": [
+    {
+      "name": "Section Video",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
